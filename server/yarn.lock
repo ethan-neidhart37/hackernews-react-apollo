@@ -5,6 +5,12 @@ __metadata:
   version: 4
   cacheKey: 7
 
+".prisma@link:node_modules/.prisma::locator=hackernews-node%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: ".prisma@link:node_modules/.prisma::locator=hackernews-node%40workspace%3A."
+  languageName: node
+  linkType: soft
+
 "@apollo/protobufjs@npm:^1.0.3":
   version: 1.0.5
   resolution: "@apollo/protobufjs@npm:1.0.5"
@@ -67,24 +73,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prisma/client@npm:^2.12.1":
-  version: 2.12.1
-  resolution: "@prisma/client@npm:2.12.1"
+"@prisma/client@npm:2.16.1":
+  version: 2.16.1
+  resolution: "@prisma/client@npm:2.16.1"
   dependencies:
-    "@prisma/engines-version": 2.12.0-18.cf0680a1bfe8d5e743dc659cc7f08009f9587d58
+    "@prisma/engines-version": 2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03
   peerDependencies:
-    "@prisma/cli": "*"
+    prisma: ">=2.15.0"
   peerDependenciesMeta:
-    "@prisma/cli":
+    prisma:
       optional: true
-  checksum: 911903166a3ccd42d34f4af6efe346a2951b1fe88843cd9e4d20c0f11b6382cba434dd21d9367cc651e063af98e0024b749e3454b4fa1629ea6862e33af6c0f2
+  checksum: 4ff76bec99f5219c375acd82ec573f88af5e924a728e406c6782a98acb8fd25d0a465e77d5487c7261baf695aa037a9833ad9dc81057b17972a7005c0f8d3835
   languageName: node
   linkType: hard
 
-"@prisma/engines-version@npm:2.12.0-18.cf0680a1bfe8d5e743dc659cc7f08009f9587d58":
-  version: 2.12.0-18.cf0680a1bfe8d5e743dc659cc7f08009f9587d58
-  resolution: "@prisma/engines-version@npm:2.12.0-18.cf0680a1bfe8d5e743dc659cc7f08009f9587d58"
-  checksum: 41f0d2d3a0127c0fcd06fcd5b6ebdef351a0a261eebedef895cd367c182ae4e9e9e3c9b961ca2eb295f585be8ea9506f4e9ad1a11002acce8f62178b17a6ab10
+"@prisma/engines-version@npm:2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03":
+  version: 2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03
+  resolution: "@prisma/engines-version@npm:2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03"
+  checksum: dc0fa6753ad2c4ba53a19e6d4df5a1622d6b9cf96021c7740293bb18bd8cb2850145c36da86c1828f32dc7cafce25a06003a50dcf088d136fc0115565f41a83f
   languageName: node
   linkType: hard
 
@@ -92,6 +98,13 @@ __metadata:
   version: 2.12.0-18.cf0680a1bfe8d5e743dc659cc7f08009f9587d58
   resolution: "@prisma/engines@npm:2.12.0-18.cf0680a1bfe8d5e743dc659cc7f08009f9587d58"
   checksum: 8eb661a5d15fa3852e754708990b4180343008010f1d0e8408b287eab42c0dd93d282b13791004c6b39c671fcb000a4c19513433850f74db9580d6584d42896c
+  languageName: node
+  linkType: hard
+
+"@prisma/engines@npm:2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03":
+  version: 2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03
+  resolution: "@prisma/engines@npm:2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03"
+  checksum: 1569df7e912295a02f1628e8de949902f0c2d52011cdfe8cab2d7fa13944a9e5a66d8c6633d8b4b8214437632b798d8583bab95e503fbfcd842eb8a96db3c025
   languageName: node
   linkType: hard
 
@@ -1820,16 +1833,25 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"graphql@npm:^15.5.0":
+  version: 15.5.0
+  resolution: "graphql@npm:15.5.0"
+  checksum: 789cdcb069a3e00592e779002217a6bc5fd09efad63ee8c4190c4b3ea96c89010e74f085fb1cba876a0bb0e324e01df2eddb84d79dca90a28e582bc425fef9ef
+  languageName: node
+  linkType: hard
+
 "hackernews-node@workspace:.":
   version: 0.0.0-use.local
   resolution: "hackernews-node@workspace:."
   dependencies:
     "@prisma/cli": ^2.12.1
-    "@prisma/client": ^2.12.1
+    "@prisma/client": 2.16.1
     apollo-server: ^2.19.0
     bcryptjs: 2.4.3
+    graphql: ^15.5.0
     jsonwebtoken: 8.5.1
     nodemon: ^2.0.6
+    prisma: 2.16.1
   languageName: unknown
   linkType: soft
 
@@ -2789,6 +2811,18 @@ fsevents@~2.1.2:
   version: 2.0.0
   resolution: "prepend-http@npm:2.0.0"
   checksum: d39325775adce38e18213fd19656af4abd7672ef6b1e330437079bb237de011d49a70bfb56b35037603d30ef279cceddb33794f70168582d50845c2ade29968e
+  languageName: node
+  linkType: hard
+
+"prisma@npm:2.16.1":
+  version: 2.16.1
+  resolution: "prisma@npm:2.16.1"
+  dependencies:
+    "@prisma/engines": 2.16.1-1.8b74ad57aaf2cc6c155f382a18a8e3ba95aceb03
+  bin:
+    prisma: build/index.js
+    prisma2: build/index.js
+  checksum: 373c411c8e466192afab084038a6314c5f130bfbe143d2914010dc43b31855693b4041ec23e0f67623b6258754b9d87a9c1feede9107262a2696718973bb51cc
   languageName: node
   linkType: hard
 
